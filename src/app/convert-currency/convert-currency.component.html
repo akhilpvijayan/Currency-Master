@@ -1,0 +1,46 @@
+<div style="display: flex;height: 750px;justify-content: center;align-items: center;">
+    <div class="wrapper">
+      <header>Currency Converter</header>
+      <form action="#">
+        <div class="amount" style="width: 400px; float: left; padding-right: 24px;">
+          <p>Enter Amount</p>
+          <input type="text" style="border-color: black;" value="1">
+        </div>
+        <div class="drop-list">
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+              
+              <select name="" id="country1">
+                <option value="USD" style="background-image:url(https://flagcdn.com/48x36/us.png);">United State Dollars</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="EUR">Euro</option>
+                <option value="PND">British Pounds</option>
+                <option value="CAD">Canadian Dollars</option>
+                </select>
+            </div>
+          </div>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-box ">
+              <img src="https://flagcdn.com/48x36/np.png" alt="flag">
+              <select name="" id="country2">
+                <option value="USD" style="background-image:url(https://flagcdn.com/48x36/us.png);">United State Dollars</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="EUR">Euro</option>
+                <option value="PND">British Pounds</option>
+                <option value="CAD">Canadian Dollars</option>
+                </select>
+            </div>
+          </div>
+        </div>
+        <div class="exchange-rate">Getting exchange rate...</div>
+        <button>Get Exchange Rate</button>
+      </form>
+    </div>
+
+    <script src="js/country-list.js"></script>
+    <script src="js/script.js"></script>
+  </div>
+
