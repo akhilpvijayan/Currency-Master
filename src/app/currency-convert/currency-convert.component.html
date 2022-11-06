@@ -1,0 +1,57 @@
+<div class = "body">
+<div class="bg-img">
+<div style="display: flex;height: 750px;justify-content: center;align-items: center;" class="container-fluid">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="btn-group">
+                <button type="button" class="btn btn1 active"><h3>Converter</h3></button>
+                <button type="button" class="btn btn2  btn-secondary disabled"><h3>Graph</h3></button>
+            </div>
+            <br>
+            <div class="card-body">
+                <form class="form-inline">
+                    <div class="form-row">
+                        <div class="amount col" style=" float: left; padding-right: 24px;">
+                            <h4><b>Amount</b></h4>
+                            <input type="number" #c3 style="border-color: black;" value="1" (mouseleave)="changeAmount(c3.value)">
+                        </div>
+                        <div class="amount col" style=" float: left; padding-right: 24px;">
+                            <h4><b>From</b></h4>
+                            <select #c1 class="form-select" aria-label="Default select example" id="country1" (mouseleave)="changeBase(c1.value)">
+                                <option value="USD" selected style="background-image:url(https://flagcdn.com/48x36/us.png);">USD - US Dollars</option>
+                                <option value="INR">INR - Indian Rupee</option>
+                                <option value="EUR">Euro</option>
+                                <option value="PND">GBP - British Pounds</option>
+                                <option value="CAD">CAD - Canadian Dollars</option>
+                              </select>
+                        </div>
+                        <div class="amount col" style=" float: left; padding-right: 24px; padding-top: 40px; width: 20%;">
+                            <input type="button" class="btn btn-primary" style=" border-radius: 10px;">
+                        </div>
+                        <div class="amount col" style=" float: left;">
+                            <h4><b>To</b></h4>
+                            <select #c2 class="form-select" aria-label="Default select example" id="country2" (mouseleave)="changeCountry2(c2.value)">
+                                <option selected value="USD" style="background-image:url(https://flagcdn.com/48x36/us.png);">United State Dollars</option>
+                                <option value="INR">Indian Rupee</option>
+                                <option value="EUR">Euro</option>
+                                <option value="PND">British Pounds</option>
+                                <option value="CAD">Canadian Dollars</option>
+                              </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="padding-top: 10px;">
+                        <h4><b style="color: rgb(99, 98, 98);">{{amount}} {{base}} = </b></h4>
+                        <h2><b>{{result}} {{country2}}</b></h2>
+                        <h5>{{amount}} {{country2}} = {{result}} {{base}}</h5>
+                    </div>
+                    <br>
+
+                    <div style="padding-top: 40px; width: 100%;"><button type="submit" style="width: 100%;" class="btn btn-primary" onclick="convert()">Get Exchange Rate</button></div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</div>    
+</div>
+</div>
